@@ -1,6 +1,74 @@
-# Getting Started with Create React App
+# Use Case #7:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Create unit tests that cover functionality to improve the quality and safety of the application
+
+## Use Case Description
+
+Create unit tests that cover individual functions or methods by using testing libraries. Additionally, group related tests by the respective suite and write common configurations for the tests that should be executed before and after each test in the suite. Further, use the solution to optimize element selections and matching when necessary.
+
+## Test Overview
+
+The test suite provided primarily focuses on the validation and functionality of a form component named `<MyFormComponent />`. The form seems to be structured around collecting user information including their name, email, gender, and agreement to terms. The tests ensure the accurate rendering of form elements, validation of form input fields, and the proper functioning of API calls upon form submissions. Mocked fetch responses are used to simulate API interactions.
+
+## Test Specifics
+
+There are multiple individual test cases within the suite:
+
+1. **Rendering Tests**: These ensure all necessary form fields and buttons are rendered correctly.
+2. **Validation Tests**: These are centered around validation messages - ensuring that they appear when needed and are absent when the form is correctly filled.
+3. **Submission Tests**: These test cases verify that upon submission, the correct API calls are made with the expected payloads. There's also validation to ensure that the component can handle a variety of edge cases such as long names and complex email formats.
+4. **Re-submission Test**: This checks that the form can be submitted multiple times in succession without issues.
+5. **Error Scenarios**: The test suite also covers scenarios where the user might not fill the form correctly, checking that the appropriate error messages are displayed.
+
+## 🚀 Running Tests Locally
+
+Before running tests, ensure you've set up your project by following the initial installation and setup instructions.
+
+### 1. **Install Dependencies**:
+
+If you haven't already installed the project dependencies, run:
+```bash
+npm install
+```
+or if you're using yarn:
+```bash
+yarn
+```
+
+### 2. **Running Tests**:
+
+To execute all tests:
+```bash
+npm test
+```
+or if you're using yarn:
+```bash
+yarn test
+```
+By default, this command runs tests in a watch mode. You can navigate and use the watch mode using the CLI interface it provides.
+
+### 3. **Running a Single Test**:
+
+To run a specific test or test suite, simply provide its path or filename as an argument:
+```bash
+npm test /path/to/your/test/file.test.js
+
+```
+or if you're using yarn:
+```bash
+yarn test /path/to/your/test/file.test.js
+```
+
+### 4. **Generating Test Coverage**:
+
+For a coverage report:
+```bash
+npm test -- --coverage
+```
+or if you're using yarn:
+```bash
+yarn test --coverage
+```
 
 ## Available Scripts
 
